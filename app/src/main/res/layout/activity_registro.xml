@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+
+    android:weightSum="1"
+    >
+
+    <include
+        android:id="@+id/mi_toolbar"
+        layout ="@layout/toolbal_principal"
+        />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellido"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/etUsuarioNuevo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/etContraNueva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/etContraOtraVez"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Repetir Contraseña"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREAR USUARIO"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        />
+</LinearLayout>
