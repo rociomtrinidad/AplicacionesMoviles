@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class RegistroActivity extends AppCompatActivity {
 
     EditText etNombre, etApellido, etUsuarioNuevo, etContraNueva, etContraOtraVez, etEmail;
-    Button btnCrear;
+    Button btnCrear, btnVolver;
     Toolbar mi_toolbar;
 
     @Override
@@ -59,5 +59,17 @@ public class RegistroActivity extends AppCompatActivity {
 
             }
         });
+        btnVolver = findViewById(R.id.btnVolver);
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent main_activity = new Intent(RegistroActivity.this, MainActivity.class);
+
+                startActivity(main_activity);
+                finish();
+            }
+        });
+
     }
 }

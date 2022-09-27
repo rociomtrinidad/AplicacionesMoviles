@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -60,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(item.getItemId()==R.id.item_cerrar){
+            SharedPreferences prefs = getApplicationContext().getSharedPreferences(Contantes.SP_CREDENCIALES, MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString(Contantes.USUARIO, null);
+            editor.putString(Contantes.PASSWORD,null);
+            editor.apply();
             Intent intent = new Intent(MainActivity.this,LoginActivity.class);
             startActivity(intent);
             finish();
